@@ -11,6 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartsUnlimited.Web", "Parts
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PartsUnlimited.Tests", "PartsUnlimited.Tests\PartsUnlimited.Tests.csproj", "{917769B4-7A13-4884-AFF4-D3AB4088D913}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup", "Setup", "{0F4D7714-58A9-41CB-8E88-02F6FEFEC65F}"
+	ProjectSection(SolutionItems) = preProject
+		setup.ps1 = setup.ps1
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
