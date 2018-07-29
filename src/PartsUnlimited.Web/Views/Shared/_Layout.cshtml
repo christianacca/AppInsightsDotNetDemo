@@ -9,8 +9,20 @@
         var snippet = {   
             config: {   
                 instrumentationKey: "575e9748-5b69-4da5-810c-a7e6c47ca231"
-            }   
-        };   
+            }
+        };
+        // note: tried to use 'enableCorsCorrelation: true' (see below) to cause PageView to be correlated with Request;
+        //       This is probably not the intended use for 'enableCorsCorrelation' (see http://apmtips.com/blog/2017/05/11/page-view-and-telemetry-correlation/)
+        //       In the end it made things worse! With this setting enabled a server Request is no longer correlated to it's
+        //       SQL database (dependency) calls
+        /*
+        var snippet = {   
+            config: {   
+                instrumentationKey: "575e9748-5b69-4da5-810c-a7e6c47ca231",
+                enableCorsCorrelation: true
+            }
+        };
+        */
         var init = new Microsoft.ApplicationInsights.Initialization(snippet);   
         var appInsights = init.loadAppInsights();   
         appInsights.trackPageView();
